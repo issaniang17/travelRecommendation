@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Issa Travel Recommendation</title>
 </head>
 <body>
@@ -25,12 +26,24 @@
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-youtube"></i>
         </div>
-        <div class='description-c'>
-            <h1>explore dream destination</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsam animi sunt repellat pariatur! Aliquid quam harum cumque soluta, asperiores similique pariatur facilis? Molestias architecto qui numquam aliquid impedit nesciunt!
-            Qui ipsa cumque inventore, rem unde tempora suscipit ullam eveniet, id aliquid nulla reiciendis placeat esse illo ipsam beatae debitis, optio amet quasi eos vero aspernatur dignissimos sit. Excepturi, vero?</p>
-            <button id='book'>Book now</button>
+        <div class='contact-info'>
+            <div id='desc-contact'>
+                <h1>contact us</h1>
+                <p>Get in touch</p>
+            </div>
+            <div class='form-div' id='formContact'>
+                <form>
+                <label for="name">Name</label>
+                <input type="text" placeholder='Ente your name' id='nameContact'>
+                <label for="email">Email</label>
+                <input type="email" id='emailConctact' placeholder='Enter your email'>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder='Enter your message'></textarea>
+                <button>Submit</button>
+            </form>
         </div>
     </div>
+    </div>
+    <script src="./travel_recommendation.js"></script>
 </body>
 </html>
