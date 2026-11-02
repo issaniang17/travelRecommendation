@@ -21,57 +21,82 @@ search.addEventListener('click', ()=>{
     fetch('./travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
+        
         travelResult = data
-        if('beaches'.includes(searchText.value)){
-            const beaches = travelResult.beaches
-            beaches.forEach(beach =>{
-                let div = document.createElement('div')
-                div.setAttribute('class', 'view')
-                div.innerHTML =`<img src='${beach.imageUrl}'>
-                <h2>${beach.name}</h2>
-                <p>${beach.description}</p>`
-                searchDiv.appendChild(div)
-                searchDiv.classList.add('searchDiv')
-                
-            })
-            resultDiv.classList.remove('hidden')
-            
-            
-        }else if('temples'.includes(searchText.value)){
-            const temples = travelResult.temples
-            temples.forEach(temple =>{
-                let div = document.createElement('div')
-                div.setAttribute('class', 'view')
-                div.innerHTML =`<img src='${temple.imageUrl}'>
-                <h2>${temple.name}</h2>
-                <p>${temple.description}</p>`
-                searchDiv.appendChild(div)
-                searchDiv.classList.add('searchDiv')
-
-            })
-            resultDiv.classList.remove('hidden')
-        }else{
+        if(searchText.value === 'country' ){
             const countries = travelResult.countries
-            const country = countries.filter(countrie => countrie.name.toLowerCase() === searchText.value.toLowerCase())
-            
-            country.forEach(count =>{
-                let div = document.createElement('div')
-                div.innerHTML = ''
-                div.setAttribute('class', 'view')
-                div.innerHTML += `<h2>${count.name}</h2>`
-                count.cities.forEach(city =>{
-                    console.log(city)
-                    div.innerHTML += `<img src='${city.imageUrl}'>
-                    <h2>${city.name}</h2>
-                <p>${city.description}</p>`
-                })
                 
-                searchDiv.appendChild(div)
-                searchDiv.classList.add('searchDiv')
-
-            })
-            resultDiv.classList.remove('hidden')
+                
+                countries.forEach(count =>{
+                    let div = document.createElement('div')
+                    div.innerHTML = ''
+                    div.setAttribute('class', 'view')
+                    div.innerHTML += `<h2>${count.name}</h2>`
+                    count.cities.forEach(city =>{
+                        console.log(city)
+                        div.innerHTML += `<img src='${city.imageUrl}'>
+                        <h2>${city.name}</h2>
+                    <p>${city.description}</p>`
+                    })
+                    
+                    searchDiv.appendChild(div)
+                    searchDiv.classList.add('searchDiv')
+    
+                })
+                resultDiv.classList.remove('hidden')
+        }else{
+            if('beaches'.includes(searchText.value)){
+                const beaches = travelResult.beaches
+                beaches.forEach(beach =>{
+                    let div = document.createElement('div')
+                    div.setAttribute('class', 'view')
+                    div.innerHTML =`<img src='${beach.imageUrl}'>
+                    <h2>${beach.name}</h2>
+                    <p>${beach.description}</p>`
+                    searchDiv.appendChild(div)
+                    searchDiv.classList.add('searchDiv')
+                    
+                })
+                resultDiv.classList.remove('hidden')
+                
+                
+            }else if('temples'.includes(searchText.value)){
+                const temples = travelResult.temples
+                temples.forEach(temple =>{
+                    let div = document.createElement('div')
+                    div.setAttribute('class', 'view')
+                    div.innerHTML =`<img src='${temple.imageUrl}'>
+                    <h2>${temple.name}</h2>
+                    <p>${temple.description}</p>`
+                    searchDiv.appendChild(div)
+                    searchDiv.classList.add('searchDiv')
+    
+                })
+                resultDiv.classList.remove('hidden')
+            }else{
+                const countries = travelResult.countries
+                const country = countries.filter(countrie => countrie.name.toLowerCase() === searchText.value.toLowerCase())
+                
+                country.forEach(count =>{
+                    let div = document.createElement('div')
+                    div.innerHTML = ''
+                    div.setAttribute('class', 'view')
+                    div.innerHTML += `<h2>${count.name}</h2>`
+                    count.cities.forEach(city =>{
+                        console.log(city)
+                        div.innerHTML += `<img src='${city.imageUrl}'>
+                        <h2>${city.name}</h2>
+                    <p>${city.description}</p>`
+                    })
+                    
+                    searchDiv.appendChild(div)
+                    searchDiv.classList.add('searchDiv')
+    
+                })
+                resultDiv.classList.remove('hidden')
+            }
         }
+        
     })
     .catch(error => console.error(error))
     
