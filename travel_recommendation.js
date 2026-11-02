@@ -10,52 +10,68 @@ console.log(searchText)
 
 reset.addEventListener('click', ()=>{
     searchText.value = ''
+    searchDiv.innerHTML = ''
 })
 
 searchText.addEventListener('change',(event)=>{
     searchText.value = event.target.value.trim().toLowerCase()
-    console.log(searchText.value)
+    
 })
 search.addEventListener('click', ()=>{
     fetch('./travel_recommendation_api.json')
     .then(response => response.json())
-    .then(data => travelResult = data)
-    .catch(error => console.error(error))
-    {
-        if('beaches'.includes(searchText.value )){
-            data.beaches.filter(beache => travelResult.push(beache))
-        }else if('temples'.includes(searchText.value )){
-            data.beaches.filter(beache => travelResult.push(beache))
-        }else{
-          const country =  data.countries.find(country => country.name === searchText.value)
-          travelResult.push(country)
-        }
-        if(travelResult.cities){
-            travelResult.cities.forEach(city =>{
+    .then(data => {
+        travelResult = data
+        if('beaches'.includes(searchText.value)){
+            const beaches = travelResult.beaches
+            beaches.forEach(beach =>{
                 let div = document.createElement('div')
-                div.classList.add('view')
-                div.innerHTML = `<img src='${city.imageUrl}'>
-                <p>${city.name}</p>
-                <p>${city.description}</p>`
+                div.setAttribute('class', 'view')
+                div.innerHTML =`<img src='${beach.imageUrl}'>
+                <h2>${beach.name}</h2>
+                <p>${beach.description}</p>`
                 searchDiv.appendChild(div)
-                searchDiv.classList.toggle('show hidden')
+                searchDiv.classList.add('searchDiv')
                 
             })
-        }else{
-            travelResult.forEach(city =>{
-                let div = document.createElement('div')
-                div.classList.toggle('view')
-                div.innerHTML = `<img src='${city.imageUrl}'>
-                <p>${city.name}</p>
-                <p>${city.description}</p>`
+            resultDiv.classList.remove('hidden')
             
+            
+        }else if('temples'.includes(searchText.value)){
+            const temples = travelResult.temples
+            temples.forEach(temple =>{
+                let div = document.createElement('div')
+                div.setAttribute('class', 'view')
+                div.innerHTML =`<img src='${temple.imageUrl}'>
+                <h2>${temple.name}</h2>
+                <p>${temple.description}</p>`
                 searchDiv.appendChild(div)
-                searchDiv.classList.toggle('show', 'hidden')
-                
-            })
-        }
+                searchDiv.classList.add('searchDiv')
 
-    }
+            })
+            resultDiv.classList.remove('hidden')
+        }else{
+            const countries = travelResult.countries
+            const country = countries.filter(countrie => countrie.name.toLowerCase() === searchText.value.toLowerCase())
+            
+            country.forEach(count =>{
+                let div = document.createElement('div')
+                div.innerHTML = ''
+                div.innerHTML += `<h2>${count.name}</h2>`
+                count.cities.forEach(city =>{
+                    console.log(city)
+                    div.innerHTML += `<img src='${city.imageUrl}'>
+                    <h2>${city.name}</h2>
+                <p>${city.description}</p>`
+                })
+                
+                searchDiv.appendChild(div)
+
+            })
+            resultDiv.classList.toggle('hidden')
+        }
+    })
+    .catch(error => console.error(error))
     
 })
 // contactForm.addEventListener('submit',(event)=>{

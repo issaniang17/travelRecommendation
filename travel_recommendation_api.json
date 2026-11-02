@@ -6,12 +6,12 @@
         "cities": [
           {
             "name": "Sydney, Australia",
-            "imageUrl": "enter_your_image_for_sydney.jpg",
+            "imageUrl": "https://tse4.mm.bing.net/th/id/OIP.SZW9PL1uc0Pbs4DnsNqZOQHaEL?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
             "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
           },
           {
             "name": "Melbourne, Australia",
-            "imageUrl": "enter_your_image_for_melbourne.jpg",
+            "imageUrl": "https://handluggageonly.co.uk/wp-content/uploads/2017/08/Melbourne-City-Skyline.jpg",
             "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
           }
         ]
@@ -22,12 +22,12 @@
         "cities": [
           {
             "name": "Tokyo, Japan",
-            "imageUrl": "enter_your_image_for_tokyo.jpg",
+            "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.B7dMGeQ5WqyipgbcQQMBNwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
           },
           {
             "name": "Kyoto, Japan",
-            "imageUrl": "enter_your_image_for_kyoto.jpg",
+            "imageUrl": "https://th.bing.com/th/id/R.2a8043b7983c3027ce4e809b46d03c07?rik=VMupMhXAP5Hn6w&pid=ImgRaw&r=0",
             "description": "Known for its historic temples, gardens, and traditional tea houses."
           }
         ]
@@ -38,12 +38,12 @@
         "cities": [
           {
             "name": "Rio de Janeiro, Brazil",
-            "imageUrl": "enter_your_image_for_rio.jpg",
+            "imageUrl": "https://wallpaperaccess.com/full/3188247.jpg",
             "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
           },
           {
             "name": "São Paulo, Brazil",
-            "imageUrl": "enter_your_image_for_sao-paulo.jpg",
+            "imageUrl": "https://www.mauriciotravels.com/wp-content/uploads/2023/10/rio.jpg",
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
           }
         ]
@@ -53,13 +53,13 @@
       {
         "id": 1,
         "name": "Angkor Wat, Cambodia",
-        "imageUrl": "enter_your_image_for_angkor-wat.jpg",
+        "imageUrl": "https://th.bing.com/th/id/R.5a98a64997be83fccfca0a04a9db6a41?rik=p9UQYz0T3SR6Rg&pid=ImgRaw&r=0",
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
       },
       {
         "id": 2,
         "name": "Taj Mahal, India",
-        "imageUrl": "enter_your_image_for_taj-mahal.jpg",
+        "imageUrl": "https://th.bing.com/th/id/R.15ce848287fd8f26896896535c645a05?rik=QIC6tC4c2zDtmA&riu=http%3a%2f%2f1.bp.blogspot.com%2f-3mUa4Z5ria0%2fToRV3GwN0GI%2fAAAAAAAAAQ8%2fkA71S1kIesE%2fs1600%2fTaj%2bMahal.jpg&ehk=Z1aESd3D0owR8zsCZmZ4SkbD5aJoc5kjE0ob2e4S9uA%3d&risl=&pid=ImgRaw&r=0",
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
       }
     ],
@@ -67,13 +67,13 @@
       {
         "id": 1,
         "name": "Bora Bora, French Polynesia",
-        "imageUrl": "enter_your_image_for_bora-bora.jpg",
+        "imageUrl": "https://cdn.britannica.com/16/60016-050-5D8447C8/peaks-Bora-Bora-Society-Islands-lagoon-French-Polynesia.jpg",
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
       },
       {
         "id": 2,
         "name": "Copacabana Beach, Brazil",
-        "imageUrl": "enter_your_image_for_copacabana.jpg",
+        "imageUrl": "https://tse1.mm.bing.net/th/id/OIP.Ys5Byrp-JwWBvfRzunbblwHaEo?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
       }
     ]
