@@ -57,6 +57,7 @@ search.addEventListener('click', ()=>{
             country.forEach(count =>{
                 let div = document.createElement('div')
                 div.innerHTML = ''
+                div.setAttribute('class', 'view')
                 div.innerHTML += `<h2>${count.name}</h2>`
                 count.cities.forEach(city =>{
                     console.log(city)
@@ -66,9 +67,10 @@ search.addEventListener('click', ()=>{
                 })
                 
                 searchDiv.appendChild(div)
+                searchDiv.classList.add('searchDiv')
 
             })
-            resultDiv.classList.toggle('hidden')
+            resultDiv.classList.remove('hidden')
         }
     })
     .catch(error => console.error(error))
